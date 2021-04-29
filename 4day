@@ -1,0 +1,52 @@
+'''
+##1번
+result = float(0)
+for y in range(1,11):
+    result += float(1/y)
+    print(result)
+
+##2번
+num = int(input('단 :'))
+for i in range(1,10):
+    print(num,'*',i,'=',num*i)
+
+##3번
+for i in range(5):
+    for j in range(1,5):
+        print(j,end='')
+    print()
+
+##4번
+a = 0
+result = 0
+while(1):
+    a = int(input('정수 :'))
+    if(a==0):
+        break
+    result += a
+print('합 :',result)
+
+##5번
+pas = ''
+while(1):
+    pas = input('비밀번호 :')
+    if(pas == 'pwpass'):
+        print('LogIn Pass!!')
+        break;
+
+##6번
+num = 0
+result = 0
+while(1):
+    num = int(input('정수 :'))
+    if(num>0):
+        result += num
+    elif(num == 0):
+        break
+print(result)
+'''
+##7번
+for i in range(1,6,1):
+    print(i, end=' ')
+    for j in range(5,0,-1):
+        print(j)
