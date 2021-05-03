@@ -44,9 +44,118 @@ while(1):
     elif(num == 0):
         break
 print(result)
-'''
+
 ##7번
 for i in range(1,6,1):
     print(i, end=' ')
     for j in range(5,0,-1):
         print(j)
+
+##! 8번(for문 바깥 1개, 안쪽 2개)
+for i in range(1,6,1):
+    print('*'*i)
+
+##! 9번 (for문 바깥 1개, 안쪽 2개)
+j = 1
+for i in range(1, 6):
+    for j in range(5-i):
+        print(' ',end='')
+    for j in range(i):
+        print('*', end='')
+    print('')
+
+##! 10번 (for문 바깥 1개, 안쪽 3개)
+for i in range(1,6):
+    for j in range(5-i):
+        print(' ', end='')
+    for j in range(1, i*2, 1):
+        print('*', end='')
+    print()
+
+##11번
+i = 1
+j = 2
+while(1):
+    print(i, '번 접으면 ', j, 'mm')
+    if(j>=100000):
+        break
+    i += 1
+    j *= 2
+
+##12번
+def welcome():
+    print('환영합니다.')
+for i in range(3):
+    welcome()
+
+##13번
+def print_str(a):
+    print(a)
+name = input('문자열 : ')
+num = int(input('횟수 : '))
+for i in range(num):
+    print_str(name)
+
+##14번
+def maxnum(a, b):
+    if(a>b):
+        print('큰 수 = ',a)
+    elif(a<b):
+        print('큰 수 = ', b)
+    else:
+        print(a,'=',b)
+num1 = int(input('숫자1 :'))
+num2 = int(input('숫자2 :'))
+maxnum(num1, num2)
+
+##15번
+def one2n_sum1(a):
+    if(a<=0):
+        print('입력된 수가 1보다 작습니다.')
+    else:
+        b = a
+        sum = 0
+        for i in range(1, a+1):
+            sum = sum + i
+        print('1 --', b, '=', sum)
+num = int(input('자연수 : '))
+one2n_sum1(num)
+
+##16번
+def m2n_sum(a, b):
+    sum = 0
+    print(a, '--', b, '=', end='')
+    if(a < b):
+        for i in range(a, b+1):
+            sum += i
+        print(sum)
+    elif(a > b):
+        for i in range(b, a+1):
+            sum += i
+        print(sum)
+    else:
+        print(a)
+num1 = int(input('정수1 : '))
+num2 = int(input('정수2 : '))
+m2n_sum(num1, num2)
+
+##17번
+def pzn(a):
+    if(a > 0):
+        a = 1
+        print('양수')
+    elif(a < 0):
+        a = -1
+        print('음수')
+    else:
+        a = 0
+        print(a)
+    return a
+
+while(1):
+    num = int(input('정수  : '))
+    num = pzn(num)
+    if(num == 0):
+        break
+'''
+##18번
